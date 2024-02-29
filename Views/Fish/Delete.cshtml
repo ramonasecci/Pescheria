@@ -1,0 +1,14 @@
+﻿@model Fish
+@if (TempData["MessageError"] is not null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["MessageError"]
+    </div>
+}
+<h2> Sei sicuro di voler eliminare la risorsa: @(Model.Name) ?</h2>
+
+<form asp-controller="Fish" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="@Model.FishId"/>
+    <button class="btn btn-danger">Elimina</button>
+
+</form>

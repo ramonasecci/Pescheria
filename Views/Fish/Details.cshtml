@@ -1,0 +1,10 @@
+﻿@if (Model != null)
+{
+    <li>Nome: @Model.Name</li>
+    <li>Prezzo: @(Model.Price / 100)€</li>
+    <li>È un pesce marino: @(Model.IsSeaFish ? "Pesce di mare" : "Non è un pesce marino")</li>
+}
+else
+{
+    <li>Errore nell'aggiunta dell'articolo</li>
+}
